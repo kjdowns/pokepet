@@ -1,0 +1,9 @@
+<h1>Poke Pets!</h1>
+
+<% @pokepets.each do |pet| %>
+    <div>
+        <%= image_tag(pet.image) %><br>
+        <%= pet.name %><br>
+        Type: <%= pet.element %><br>
+    </div>
+<% end %>
