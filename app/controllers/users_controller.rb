@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        
+        params.require(:user).permit(:user_name, :password, :poke_dollars, :treats, :poke_toys, :pokedolls)
     end
 
 end
