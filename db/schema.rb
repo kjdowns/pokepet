@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_02_11_173537) do
 
   create_table "adoptions", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "pokepet_id"
+    t.integer "poke_pet_id"
     t.string "nickname"
     t.integer "hunger"
     t.integer "thirst"
