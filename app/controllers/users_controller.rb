@@ -10,6 +10,10 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id 
         end
     end
+    
+    def show
+       @user = User.find_by(params[:id])     
+    end
 
     private
 
