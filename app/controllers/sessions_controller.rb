@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     end
 
     def signin
-        
+        @user = User.new
     end
 
 end
