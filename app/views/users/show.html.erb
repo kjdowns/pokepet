@@ -6,3 +6,7 @@
     <li>PokeToys: <%= @user.poke_toys %></li>
     <li>PokeDolls: <%= @user.poke_dolls %></li>
 </ul>
+<h3>Your Adoptions</h3>
+<% @user.adoptions.each do |adopt| %>
+    <%= adopt.nickname %>
+<% end %>
