@@ -1,4 +1,8 @@
 class PokePetsController < ApplicationController
+
+    def show
+        @pokepets = PokePet.all
+    end
     
     private
 
