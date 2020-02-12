@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(version: 2020_02_11_173537) do
   create_table "users", force: :cascade do |t|
     t.string "user_name"
     t.string "password_digest"
-    t.integer "poke_dollars"
-    t.integer "treats"
-    t.integer "poke_toys"
-    t.integer "poke_dolls"
+    t.integer "poke_dollars", default: 1000
+    t.integer "treats", default: 10
+    t.integer "poke_toys", default: 10
+    t.integer "poke_dolls", default: 5
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
