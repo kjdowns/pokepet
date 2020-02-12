@@ -1,0 +1,3 @@
+class PokePetsController < ApplicationController
+    
+end
