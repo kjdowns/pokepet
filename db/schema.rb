@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_11_173537) do
+ActiveRecord::Schema.define(version: 2020_02_12_184921) do
 
   create_table "adoptions", force: :cascade do |t|
     t.integer "user_id"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_02_11_173537) do
 
   create_table "poke_pets", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "element"
     t.string "image"
     t.integer "max_level"
     t.datetime "created_at", precision: 6, null: false
