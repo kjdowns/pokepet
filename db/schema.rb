@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_11_173552) do
+ActiveRecord::Schema.define(version: 2020_02_11_173537) do
 
   create_table "adoptions", force: :cascade do |t|
     t.integer "user_id"
@@ -21,16 +21,6 @@ ActiveRecord::Schema.define(version: 2020_02_11_173552) do
     t.integer "happiness"
     t.integer "exp"
     t.integer "level"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "inventories", force: :cascade do |t|
-    t.integer "poke_dollars"
-    t.integer "treats"
-    t.integer "poke_toys"
-    t.integer "poke_dolls"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,6 +37,10 @@ ActiveRecord::Schema.define(version: 2020_02_11_173552) do
   create_table "users", force: :cascade do |t|
     t.string "user_name"
     t.string "password_digest"
+    t.integer "poke_dollars"
+    t.integer "treats"
+    t.integer "poke_toys"
+    t.integer "poke_dolls"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
