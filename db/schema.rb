@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 2020_02_11_173537) do
     t.integer "user_id"
     t.integer "poke_pet_id"
     t.string "nickname"
-    t.integer "hunger"
-    t.integer "thirst"
-    t.integer "happiness"
-    t.integer "exp"
-    t.integer "level"
+    t.integer "hunger", default: 2
+    t.integer "thirst", default: 2
+    t.integer "happiness", default: 0
+    t.integer "exp", default: 0
+    t.integer "level", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
