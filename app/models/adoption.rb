@@ -1,4 +1,4 @@
 class Adoption < ApplicationRecord
     belongs_to :user
-    belongs_to :pokepet
+    belongs_to :poke_pet
 end
