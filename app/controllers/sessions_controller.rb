@@ -1,11 +1,9 @@
 class SessionsController < ApplicationController
     
-    def home
-        
+    def home 
     end
 
     def signin
-        @user = User.new
     end
 
     def create
