@@ -1,5 +1,12 @@
 class AdoptionsController < ApplicationController
     
+    def new_pet
+        @poke_pet = PokePet.find(params[:poke_pet_id])
+        @adoption = Adoption.new
+    end
+
+    def create
+    end
 
     private
 
