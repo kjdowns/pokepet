@@ -1,6 +1,7 @@
 <h1>Adoption Agreement</h1>
 <%= form_for @adoption do |f| %>
     <%= f.hidden_field :poke_pet_id, :value => @poke_pet.id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.label :nickname %>
     <%= f.text_field :nickname %><br><br>
     <%= f.submit "Sign Agreement" %>

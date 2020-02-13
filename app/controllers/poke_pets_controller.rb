@@ -1,6 +1,6 @@
 class PokePetsController < ApplicationController
 
-    def show
+    def index
         @pokepets = PokePet.all
     end
     

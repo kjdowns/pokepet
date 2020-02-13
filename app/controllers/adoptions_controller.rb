@@ -6,6 +6,8 @@ class AdoptionsController < ApplicationController
     end
 
     def create
+        @adoption = Adoption.create(adoption_params)
+        redirect_to user_path(current_user)
     end
 
     private
