@@ -5,5 +5,6 @@
         <%= image_tag(pet.image) %><br>
         <%= pet.name %><br>
         Type: <%= pet.element %><br>
+        <%= link_to "Adopt", new_adoption_path %>
     </div>
 <% end %>
