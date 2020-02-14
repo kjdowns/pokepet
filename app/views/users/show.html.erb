@@ -11,7 +11,7 @@
     <div>
     <%= image_tag(adopt.poke_pet.image) %><br>
     <%= adopt.nickname %><br>
-    <%= link_to "Visit", adoption_path(adopt) %> | 
+    <%= link_to "Visit", user_adoption_path(current_user, adopt) %> | 
     <%= link_to "Release", adoption_path(adopt), method: :delete %>
     </div>
 <% end %>

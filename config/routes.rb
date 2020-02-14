@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   
   root 'sessions#home'
 
-  resources :users
+  resources :users do
+    resources :adoptions, only: [:show]
+  end
   resources :poke_pets do
     resources :adoptions, only: [:new]
   end
