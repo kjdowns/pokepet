@@ -16,7 +16,7 @@ class AdoptionsController < ApplicationController
 
     def update
         @adoption = Adoption.find(params[:id])
-        message = Adoption.filter_action(params[:adoption][:adopt_action])
+        message = @adoption.filter_action(params[:adoption][:adopt_action])
         redirect_to user_adoption_path(current_user, @adoption), notice: message
     end
 
