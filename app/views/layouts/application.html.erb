@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <% if !!current_user %>
+      <nav>
+        <%= link_to "Home", user_path(current_user) %> | 
+        <%= link_to "Shelter", poke_pets_path %> | 
+        <%= link_to "Log Out", logout_path %> 
+      </nav>
+    <% end %>
     <%= yield %>
   </body>
 </html>
