@@ -8,5 +8,9 @@
 </ul>
 <h3>Your Adoptions</h3>
 <% @user.adoptions.each do |adopt| %>
-    <%= adopt.nickname %>
+    <div>
+    <%= image_tag(adopt.poke_pet.image) %><br>
+    <%= adopt.nickname %><br>
+    <%= link_to "Visit", adoption_path(adopt) %>
+    </div>
 <% end %>

@@ -10,6 +10,10 @@ class AdoptionsController < ApplicationController
         redirect_to user_path(current_user)
     end
 
+    def show
+        @adoption = Adoption.find_by(id: params[:id])
+    end
+
     private
 
     def adoption_params
