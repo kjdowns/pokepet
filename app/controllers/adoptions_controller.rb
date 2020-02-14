@@ -15,6 +15,7 @@ class AdoptionsController < ApplicationController
     end
 
     def update
+        @adoption = Adoption.find(params[:id])
         case params[:adoption][:adopt_action]
             when "feed"
                 message = "You clicked feed!"
@@ -23,7 +24,7 @@ class AdoptionsController < ApplicationController
             when "play"
                 message = "You clicked play!"
         end
-        redirect_to user_adoption_path(current_user, params[:id]), notice: message
+        redirect_to user_adoption_path(current_user, @adoption), notice: message
     end
 
     def destroy
