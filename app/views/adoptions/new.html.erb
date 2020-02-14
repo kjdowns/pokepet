@@ -1,4 +1,6 @@
 <h1>Adoption Agreement</h1>
+<p>Please sign the adoption form for your new pet <%= @poke_pet.name %></p>
+<%= image_tag(@poke_pet.image) %>
 <%= form_for @adoption do |f| %>
     <%= f.hidden_field :poke_pet_id, :value => @poke_pet.id %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
