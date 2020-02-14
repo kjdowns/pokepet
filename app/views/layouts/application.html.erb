@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
     <% if !!current_user %>
       <nav>
         <%= link_to "Home", user_path(current_user) %> | 
@@ -18,6 +19,14 @@
         <%= link_to "Log Out", logout_path %> 
       </nav>
     <% end %>
+
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
+
     <%= yield %>
+    
   </body>
 </html>

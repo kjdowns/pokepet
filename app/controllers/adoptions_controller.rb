@@ -14,6 +14,11 @@ class AdoptionsController < ApplicationController
         @adoption = Adoption.find_by(id: params[:id])
     end
 
+    def update
+
+        flash[:message] = "You clicked feed!"
+    end
+
     def destroy
         Adoption.find(params[:id]).destroy
         redirect_to user_path(current_user)

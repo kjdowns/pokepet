@@ -8,3 +8,6 @@
     Happiness: <%= @adoption.happiness %><br>
     Exp: <%= @adoption.level %>
 </p>
+<%= form_for @adoption do |f| %>
+<%= f.submit "Feed" %>
+<% end %>
