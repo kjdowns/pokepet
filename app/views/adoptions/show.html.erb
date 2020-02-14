@@ -1,2 +1,10 @@
 <h1>Adoption Show</h1>
-<%= @adoption.nickname %>
+<%= image_tag(@adoption.poke_pet.image) %>
+<p>
+    <%= @adoption.nickname %> | <%= @adoption.poke_pet.element %> Type | Lvl: <%= @adoption.level %><br>
+    Species: <%= @adoption.poke_pet.name %><br>
+    Hunger: <%= @adoption.hunger %><br>
+    Thirst: <%= @adoption.thirst %><br>
+    Happiness: <%= @adoption.happiness %><br>
+    Exp: <%= @adoption.level %>
+</p>
