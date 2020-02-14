@@ -15,8 +15,15 @@ class AdoptionsController < ApplicationController
     end
 
     def update
-
-        flash[:message] = "You clicked feed!"
+        case params[:adoption][:adopt_action]
+            when "feed"
+                message = "You clicked feed!"
+            when "water"
+                message = "You clicked water!"
+            when "play"
+                message = "You clicked play!"
+        end
+        redirect_to user_adoption_path(current_user, params[:id]), notice: message
     end
 
     def destroy

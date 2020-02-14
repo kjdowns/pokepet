@@ -9,5 +9,14 @@
     Exp: <%= @adoption.level %>
 </p>
 <%= form_for @adoption do |f| %>
+<%= f.hidden_field :adopt_action, :value => "feed" %>
 <%= f.submit "Feed" %>
+<% end %>
+<%= form_for @adoption do |f| %>
+<%= f.hidden_field :adopt_action, :value => "water" %>
+<%= f.submit "Water" %>
+<% end %>
+<%= form_for @adoption do |f| %>
+<%= f.hidden_field :adopt_action, :value => "play" %>
+<%= f.submit "Play" %>
 <% end %>
