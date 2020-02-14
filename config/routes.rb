@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   root 'sessions#home'
 
   resources :users
-  resources :poke_pets
+  resources :poke_pets do
+    resources :adoptions, only: [:new]
+  end
   resources :adoptions
 
   get '/signin', to: 'sessions#signin'
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   post '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy'
 
-  get '/adoptions/poke_pet/:poke_pet_id', to: 'adoptions#new_pet', as: 'pet_adoption'
+  # get '/adoptions/poke_pet/:poke_pet_id', to: 'adoptions#new_pet', as: 'pet_adoption'
 
   get '/towns', to: 'towns#index'
   get '/bank', to: 'towns#bank'
