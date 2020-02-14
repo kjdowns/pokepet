@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   post '/logout', to: 'sessions#destroy'
   get '/logout', to: 'sessions#destroy'
 
-  # get '/adoptions/poke_pet/:poke_pet_id', to: 'adoptions#new_pet', as: 'pet_adoption'
-
   get '/towns', to: 'towns#index'
   get '/bank', to: 'towns#bank'
   get '/shop', to: 'towns#shop'
