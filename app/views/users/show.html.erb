@@ -1,11 +1,5 @@
 <h1>Welcome to PokePet <%= @user.user_name %></h1>
-<h3>Your Inventory</h3>
-<ul>
-    <li>Poke Dollars: <%= @user.poke_dollars %></li>
-    <li>Treats: <%= @user.treats %></li>
-    <li>PokeToys: <%= @user.poke_toys %></li>
-    <li>PokeDolls: <%= @user.poke_dolls %></li>
-</ul>
+<%= render partial: "inventory" %>
 <h3>Your Adoptions</h3>
 <% @user.adoptions.each do |adopt| %>
     <div>
