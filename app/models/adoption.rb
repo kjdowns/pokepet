@@ -15,13 +15,18 @@ class Adoption < ApplicationRecord
 
     def feed
         self.hunger -= 1
+        self.happiness += 1
         if self.save
-            "You clicked feed!"
+            self.user.sub_treats(1)
+            if self.user.save
+                "You clicked feed!"
+            end
         end
     end
 
     def water
         self.thirst = 0
+        self.happiness += 1
         if self.save
             "You clicked water!"
         end
@@ -29,8 +34,13 @@ class Adoption < ApplicationRecord
 
     def play
         self.happiness += 1
+        self.hunger += 1
+        self.thirst += 1
         if self.save
-            "You clicked play!"
+            self.user.sub_toys(1)
+            if self.user.save
+                "You clicked play!"
+            end
         end
     end
 
