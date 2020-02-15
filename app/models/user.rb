@@ -4,4 +4,13 @@ class User < ApplicationRecord
     has_secure_password
     validates :user_name, presence: true
     validates :user_name, uniqueness: true
+
+    def sub_pokedollars(num)
+        self.poke_dollars -= num
+    end
+
+    def add_pokedollars(num)
+        self.poke_dollars += num
+    end
+
 end
