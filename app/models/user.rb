@@ -25,7 +25,7 @@ class User < ApplicationRecord
         self.poke_toys -= num
     end
 
-    def add_treats(num)
+    def add_toys(num)
         self.poke_toys += num
     end
 
