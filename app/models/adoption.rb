@@ -2,6 +2,10 @@ class Adoption < ApplicationRecord
     belongs_to :user
     belongs_to :poke_pet
 
+    validates :hunger, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 5}
+    validates :thirst, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 5}
+    validates :happiness, numericality: {greater_than_or_equal_to: 0}
+
     def filter_action(action)
         case action
             when "feed"
