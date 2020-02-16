@@ -2,8 +2,13 @@ class User < ApplicationRecord
     has_many :adoptions
     has_many :pokepets, through: :adoptions 
     has_secure_password
+
     validates :user_name, presence: true
     validates :user_name, uniqueness: true
+    validates :poke_dollars, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 1000000}
+    validates :treats, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 50}
+    validates :poke_toys, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 50}
+    validates :poke_dolls, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 20}
 
     def sub_pokedollars(num)
         self.poke_dollars -= num
