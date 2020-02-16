@@ -1,3 +1,18 @@
+<% if user.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(user.errors.count, "error") %>
+      prohibited your account from being created:
+    </h2>
+ 
+    <ul>
+    <% user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for user do |f| %>
     <%= f.label :username %>
     <%= f.text_field :user_name %><br>
