@@ -1,5 +1,7 @@
 <h1>Adoption Show</h1>
+
 <%= render partial: "users/inventory" %>
+
 <%= image_tag(@adoption.poke_pet.image) %>
 <p>
     <%= @adoption.nickname %> | <%= @adoption.poke_pet.element %> Type | Lvl: <%= @adoption.level %><br>
@@ -9,15 +11,18 @@
     Happiness: <%= @adoption.happiness %><br>
     Exp: <%= @adoption.level %>
 </p>
+
 <%= form_for @adoption do |f| %>
-<%= f.hidden_field :adopt_action, :value => "feed" %>
-<%= f.submit "Feed" %>
+    <%= f.hidden_field :adopt_action, :value => "feed" %>
+    <%= f.submit "Feed" %>
 <% end %>
+
 <%= form_for @adoption do |f| %>
-<%= f.hidden_field :adopt_action, :value => "water" %>
-<%= f.submit "Water" %>
+    <%= f.hidden_field :adopt_action, :value => "water" %>
+    <%= f.submit "Water" %>
 <% end %>
+
 <%= form_for @adoption do |f| %>
-<%= f.hidden_field :adopt_action, :value => "play" %>
-<%= f.submit "Play" %>
+    <%= f.hidden_field :adopt_action, :value => "play" %>
+    <%= f.submit "Play" %>
 <% end %>
