@@ -16,8 +16,12 @@ class AdoptionsController < ApplicationController
 
     def update
         @adoption = Adoption.find(params[:id])
-        message = @adoption.filter_action(params[:adoption][:adopt_action])
-        redirect_to user_adoption_path(current_user, @adoption), notice: message
+        @adoption.filter_action(params[:adoption][:adopt_action])
+        if @adoption.save && @adoption.user.save
+            redirect_to user_adoption_path(current_user, @adoption)
+        else
+            render :show
+        end
     end
 
     def destroy

@@ -12,6 +12,35 @@
     Exp: <%= @adoption.level %>
 </p>
 
+<% if @adoption.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@adoption.errors.count, "error") %>
+      prohibited this adoption from being updated:
+    </h2>
+ 
+    <ul>
+    <% @adoption.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<% if @adoption.user.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@adoption.user.errors.count, "error") %>
+      prohibited this adoption user from being updated:
+    </h2>
+ 
+    <ul>
+    <% @adoption.user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @adoption do |f| %>
     <%= f.hidden_field :adopt_action, :value => "feed" %>
     <%= f.submit "Feed" %>

@@ -20,12 +20,7 @@ class Adoption < ApplicationRecord
     def feed
         self.hunger -= 1
         self.happiness += 1
-        if self.save
-            self.user.sub_treats(1)
-            if self.user.save
-                "You clicked feed!"
-            end
-        end
+        self.user.sub_treats(1)
     end
 
     def water
