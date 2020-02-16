@@ -2,5 +2,6 @@
 <p>
     <%= image_tag("https://www.levelwinner.com/wp-content/uploads/2017/05/pokemon-magikarp-jump-800x350.jpg") %>
 </p>
-<p>text blurb</p>
+<p>Here you can train your PokePets! Training a pet will increase its happiness by 10 and as a result increase its level by one. This will also max out their hunger and thirst.</p>
+<%= collection_select(:user, :adoption_id, current_user.adoptions, :id, :nickname) %>
 <p>action button</p>
