@@ -43,4 +43,15 @@ class User < ApplicationRecord
         end
     end
 
+    def filter_action(action)
+        case action
+            when "treat"
+                
+            when "toy"
+                
+            when "doll"
+                
+        end
+    end
+
 end
