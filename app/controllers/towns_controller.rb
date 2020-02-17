@@ -1,7 +1,8 @@
 class TownsController < ApplicationController
 
     def bank_action
-        redirect_to bank_path, notice: "You withdrew 1000 PokeDollars from the bank!"
+        message = current_user.withdraw_funds
+        redirect_to bank_path, notice: message
     end
 
     def shop_action
