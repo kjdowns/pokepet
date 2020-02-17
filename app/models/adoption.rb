@@ -20,19 +20,41 @@ class Adoption < ApplicationRecord
     def feed
         self.hunger -= 1
         self.happiness += 1
-        self.user.sub_treats(1)
+        if self.valid?
+            self.user.sub_treats(1)
+            if self.user.save
+                self.save
+                "You fed your PokePet with a PokeTreat. It is feeling less hungry now!"
+            else
+                "Oh, no! You don't seem to have enough PokeTreats!"
+            end
+        else
+            "Your PokePet is not hungry right now"
+        end
     end
 
     def water
         self.thirst = 0
         self.happiness += 1
+        self.save
+        "You put out some water for your PokePet. It seems to be much less thirsty now!"
     end
 
     def play
         self.happiness += 1
         self.hunger += 1
         self.thirst += 1
-        self.user.sub_toys(1)
+        if self.valid? 
+            self.user.sub_toys(1)
+            if self.user.save
+                self.save
+                "You used a PokeToy to play with your PokePet!"
+            else
+                "Oh, no! You don't seem to have enough PokeToys to play with!"
+            end
+        else
+            "Your PokePet is famished! Try feeding or giving them water before playing again."
+        end
     end
 
 end
