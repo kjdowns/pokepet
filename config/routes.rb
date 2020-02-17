@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   
   root 'sessions#home'
 
-  resources :users do
+  resources :users, only: [:new, :create, :show] do
     resources :adoptions, only: [:show]
   end
-  resources :poke_pets do
+  resources :poke_pets, only: [:index] do
     resources :adoptions, only: [:new]
   end
-  resources :adoptions
+
+  resources :adoptions, only: [:new, :create, :show, :update, :destroy]
 
   get '/signin', to: 'sessions#signin'
   post '/signin', to: 'sessions#create'
