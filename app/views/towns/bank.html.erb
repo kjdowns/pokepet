@@ -3,4 +3,4 @@
     <%= image_tag("https://nintendosoup.com/wp-content/uploads/2019/10/meowth_mime_jr_money.jpg") %>
 </p>
 <p>Welcome to the PokeBank! Here you can withdraw 1000 PokeDollars per day. Click the button below to withdraw your daily funds!</p>
-<p>button to collect money from bank</p>
+<%= button_to "Withdraw Funds", bank_path, method: :post %>
