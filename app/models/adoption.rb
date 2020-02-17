@@ -16,6 +16,8 @@ class Adoption < ApplicationRecord
                 self.water
             when "play"
                 self.play
+            when "doll"
+                self.doll
         end
     end
 
@@ -56,6 +58,18 @@ class Adoption < ApplicationRecord
             end
         else
             "Your PokePet is famished! Try feeding or giving them water before playing again."
+        end
+    end
+
+    def doll
+        if self.user.poke_dolls > 0
+            self.user.sub_dolls(1)
+            self.user.save 
+            self.happiness += 10
+            self.save
+            "Your PokePet loved the PokeDoll you gave them so much their level increased by 1!"
+        else
+            "Oh, no! You dont seem to have any PokeDolls!"
         end
     end
 
