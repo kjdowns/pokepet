@@ -59,4 +59,12 @@ class Adoption < ApplicationRecord
         end
     end
 
+    def update_level
+        self.level = (self.happiness / 10) + 1
+        if self.level.to_i >= self.poke_pet.max_level
+            self.level = "MAX"
+        end
+        self.save
+    end
+
 end
