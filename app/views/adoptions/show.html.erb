@@ -12,8 +12,11 @@
 </p>
 
 <% if @adoption.level == "MAX" %>
+
     <p>This PokePet has reached MAX level, great work! They would love for you to come visit them in the Grove!</p>
+
 <% else %>
+
     <%= form_for @adoption do |f| %>
         <%= f.hidden_field :adopt_action, :value => "feed" %>
         <%= f.submit "Give Treat" %>
@@ -28,4 +31,10 @@
         <%= f.hidden_field :adopt_action, :value => "play" %>
         <%= f.submit "Play with Toy" %>
     <% end %>
+
+    <%= form_for @adoption do |f| %>
+        <%= f.hidden_field :adopt_action, :value => "doll" %>
+        <%= f.submit "Give PokeDoll" %>
+    <% end %>
+    
 <% end %>
