@@ -26,21 +26,13 @@ class Adoption < ApplicationRecord
     def water
         self.thirst = 0
         self.happiness += 1
-        if self.save
-            "You clicked water!"
-        end
     end
 
     def play
         self.happiness += 1
         self.hunger += 1
         self.thirst += 1
-        if self.save
-            self.user.sub_toys(1)
-            if self.user.save
-                "You clicked play!"
-            end
-        end
+        self.user.sub_toys(1)
     end
 
 end
