@@ -5,7 +5,7 @@
     <div>
     <%= image_tag(adopt.poke_pet.image) %><br>
     <%= adopt.nickname %> | Lvl: <%= adopt.level %><br>
-    <%= link_to "Visit", user_adoption_path(current_user, adopt) %> | 
-    <%= link_to "Release", adoption_path(adopt), method: :delete %>
+    <%= button_to "Visit", user_adoption_path(current_user, adopt), method: :get %> 
+    <%= button_to "Release", adoption_path(adopt), method: :delete %>
     </div>
 <% end %>
