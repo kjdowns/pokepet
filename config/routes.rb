@@ -19,7 +19,10 @@ Rails.application.routes.draw do
 
   get '/towns', to: 'towns#index'
   get '/bank', to: 'towns#bank'
+  post '/bank', to: 'towns#bank_action'
   get '/shop', to: 'towns#shop'
+  post '/shop', to: 'towns#shop_action'
   get '/park', to: 'towns#park'
+  post '/park', to: 'towns#park_action'
 
 end
