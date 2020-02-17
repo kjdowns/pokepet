@@ -16,16 +16,16 @@
 <% else %>
     <%= form_for @adoption do |f| %>
         <%= f.hidden_field :adopt_action, :value => "feed" %>
-        <%= f.submit "Feed" %>
+        <%= f.submit "Give Treat" %>
     <% end %>
 
     <%= form_for @adoption do |f| %>
         <%= f.hidden_field :adopt_action, :value => "water" %>
-        <%= f.submit "Water" %>
+        <%= f.submit "Give Water" %>
     <% end %>
 
     <%= form_for @adoption do |f| %>
         <%= f.hidden_field :adopt_action, :value => "play" %>
-        <%= f.submit "Play" %>
+        <%= f.submit "Play with Toy" %>
     <% end %>
 <% end %>
