@@ -6,6 +6,7 @@ class TownsController < ApplicationController
     end
 
     def shop_action
+        raise params.inspect
         redirect_to shop_path
     end
 

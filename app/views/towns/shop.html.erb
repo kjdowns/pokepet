@@ -3,7 +3,7 @@
     <%= image_tag("https://cdn.holdtoreset.com/wp-content/uploads/2019/11/14233027/Where-Are-Poke-Marts-750x422.jpg") %>
 </p>
 <p>Welcome to the PokeMart! Here you can buy items to replenish your inventory and better care for your PokePet!</p>
-<p>
+    
     <table>
         <tr>
             <th>Item</th>
@@ -15,20 +15,35 @@
             <td>PokeTreat</td>
             <td>Reduces hunger by 1 point</td>
             <td>100</td>
-            <td>button</td>
+            <td>
+                <%= form_tag shop_path do %>
+                    <%= hidden_field_tag 'shop_action', 'treat' %>
+                    <%= submit_tag "Buy" %>
+                <% end %>
+            </td>
         </tr>
         <tr>
             <td>PokeToy</td>
             <td>Increases happiness by 1 but also increases hunger and thirst</td>
             <td>200</td>
-            <td>button</td>
+            <td>
+                <%= form_tag shop_path do %>
+                    <%= hidden_field_tag 'shop_action', 'toy' %>
+                    <%= submit_tag "Buy" %>
+                <% end %>
+            </td>
         </tr>
         <tr>
             <td>PokeDoll</td>
             <td>Increases happiness by 10, resulting in a level up</td>
             <td>500</td>
-            <td>button</td>
+            <td>
+                <%= form_tag shop_path do %>
+                    <%= hidden_field_tag 'shop_action', 'doll' %>
+                    <%= submit_tag "Buy" %>
+                <% end %>
+            </td>
         </tr>
     </table>
-</p>
+
 <%= render partial: "users/inventory" %>
