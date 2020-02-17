@@ -6,8 +6,8 @@ class TownsController < ApplicationController
     end
 
     def shop_action
-        raise params.inspect
-        redirect_to shop_path
+        message = current_user.filter_action(params[:shop_action])
+        redirect_to shop_path, notice: message
     end
 
     def training_action

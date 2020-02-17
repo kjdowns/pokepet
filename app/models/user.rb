@@ -34,6 +34,14 @@ class User < ApplicationRecord
         self.poke_toys += num
     end
 
+    def sub_dolls(num)
+        self.poke_dolls -= num
+    end
+
+    def add_dolls(num)
+        self.poke_dolls += num
+    end
+
     def withdraw_funds
         self.poke_dollars += 1000
         if self.save
@@ -46,11 +54,41 @@ class User < ApplicationRecord
     def filter_action(action)
         case action
             when "treat"
-                
+                self.sub_pokedollars(100)
+                if self.valid?
+                    self.add_treats(1)
+                    if self.save 
+                        "You bought a PokeTreat!"
+                    else
+                        "You can only hold 50 PokeTreats! Try again when you have less in your Inventory."
+                    end
+                else
+                    "You need at least 100 PokeDollars to buy a PokeTreat!"
+                end
             when "toy"
-                
+                self.sub_pokedollars(200)
+                if self.valid?
+                    self.add_toys(1)
+                    if self.save 
+                        "You bought a PokeToy!"
+                    else
+                        "You can only hold 50 PokeToys! Try again when you have less in your Inventory."
+                    end
+                else
+                    "You need at least 200 PokeDollars to buy a PokeToy!"
+                end
             when "doll"
-                
+                self.sub_pokedollars(500)
+                if self.valid?
+                    self.add_dolls(1)
+                    if self.save 
+                        "You bought a PokeDoll!"
+                    else
+                        "You can only hold 20 PokeDolls! Try again when you have less in your Inventory."
+                    end
+                else
+                    "You need at least 500 PokeDollars to buy a PokeDoll!"
+                end
         end
     end
 
