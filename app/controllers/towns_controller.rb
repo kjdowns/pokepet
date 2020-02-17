@@ -11,6 +11,8 @@ class TownsController < ApplicationController
     end
 
     def training_action
+        @adoption = Adoption.find(params[:user][:adoption_id])
+        raise params.inspect
         redirect_to training_path
     end
     
