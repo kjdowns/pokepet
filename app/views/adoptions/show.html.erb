@@ -12,25 +12,6 @@
     Exp: <%= @adoption.level %>
 </p>
 
-<% if @adoption.errors.any? || @adoption.user.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      Sorry there was an error!
-    </h2>
- 
-    <ul>
-    <% @adoption.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-    <ul>
-    <% @adoption.user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-
 <%= form_for @adoption do |f| %>
     <%= f.hidden_field :adopt_action, :value => "feed" %>
     <%= f.submit "Feed" %>
