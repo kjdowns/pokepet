@@ -34,4 +34,13 @@ class User < ApplicationRecord
         self.poke_toys += num
     end
 
+    def withdraw_funds
+        self.poke_dollars += 1000
+        if self.save
+            "You withdrew 1000 PokeDollars from the bank!"
+        else
+            "You cannot hold more than 1,000,000 PokeDollars in your wallet!"
+        end
+    end
+
 end
