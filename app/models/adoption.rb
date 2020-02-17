@@ -6,6 +6,8 @@ class Adoption < ApplicationRecord
     validates :thirst, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 5}
     validates :happiness, numericality: {greater_than_or_equal_to: 0}
 
+    scope :max_level, -> {where('level = MAX')}
+
     def filter_action(action)
         case action
             when "feed"

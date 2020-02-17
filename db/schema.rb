@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_12_184921) do
+ActiveRecord::Schema.define(version: 2020_02_17_222730) do
 
   create_table "adoptions", force: :cascade do |t|
     t.integer "user_id"
@@ -19,8 +19,7 @@ ActiveRecord::Schema.define(version: 2020_02_12_184921) do
     t.integer "hunger", default: 2
     t.integer "thirst", default: 2
     t.integer "happiness", default: 0
-    t.integer "exp", default: 0
-    t.integer "level", default: 1
+    t.text "level", default: "1"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
