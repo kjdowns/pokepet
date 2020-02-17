@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
     validates :user_name, presence: true
     validates :user_name, uniqueness: true
-    validates :poke_dollars, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 1000000}
+    validates :poke_dollars, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 1000000, message: "You cannot hold more than 1,000,000 %{attribute} in your wallet!"}
     validates :treats, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 50}
     validates :poke_toys, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 50}
     validates :poke_dolls, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 20}
