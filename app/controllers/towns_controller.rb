@@ -1,6 +1,7 @@
 class TownsController < ApplicationController
 
     def grove
+        @adoptions = current_user.adoptions.max_level
     end
 
     def bank_action
