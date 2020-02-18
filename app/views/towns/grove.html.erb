@@ -1,0 +1,8 @@
+<h1>Oak's Grove</h1>
+
+<% @adoptions.each do |adopt| %>
+    <%= image_tag(adopt.poke_pet.image) %><br>
+    <%= adopt.nickname %> | <%= adopt.poke_pet.element %> Type | Lvl: <%= adopt.level %><br>
+    Species: <%= adopt.poke_pet.name %><br>
+    Happiness: <%= adopt.happiness %><br>
+<% end %>
