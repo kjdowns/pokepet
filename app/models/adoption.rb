@@ -82,14 +82,18 @@ class Adoption < ApplicationRecord
     end
 
     def train
-        if self.hunger < 5 && self.thirst < 5
-            self.happiness += 10
-            self.hunger = 5
-            self.thirst = 5
-            self.save
-            "#{self.nickname} trained hard enough to gain a level!"
+        if self.level != "MAX"
+            if self.hunger < 5 && self.thirst < 5
+                self.happiness += 10
+                self.hunger = 5
+                self.thirst = 5
+                self.save
+                "#{self.nickname} trained hard enough to gain a level!"
+            else
+                "#{self.nickname} looks a little famished. Try giving them some treats and water before training again."
+            end
         else
-            "#{self.nickname} looks a little famished. Try giving them some treats and water before training again."
+            "#{self.nickname} is MAX level, it seems that training won't do them much good!"
         end
     end
 

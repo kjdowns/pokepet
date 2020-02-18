@@ -12,8 +12,9 @@ class TownsController < ApplicationController
 
     def training_action
         @adoption = Adoption.find(params[:user][:adoption_id])
-        raise params.inspect
-        redirect_to training_path
+        message = @adoption.train 
+        @adoption.update_level
+        redirect_to training_path, notice: message
     end
     
 end
