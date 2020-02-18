@@ -12,8 +12,8 @@ Specs:
 <!-- users have many pokepets through adoptions, pokepets have many users through adoptions -->
 - [x] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
 <!-- adoption has nickname as user submited attribute -->
-- [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+- [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
+- [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
 - [x] Include signup (how e.g. Devise)
 <!-- sessions#signup -->
 - [x] Include login (how e.g. Devise)
@@ -25,7 +25,7 @@ Specs:
 <!-- /users/:user_id/adoptions/:id -->
 - [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
 <!-- poke_pet/:id/adoptions/new -->
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [x] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
 - [x] The application is pretty DRY
