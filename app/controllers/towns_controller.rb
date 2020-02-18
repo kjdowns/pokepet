@@ -1,5 +1,8 @@
 class TownsController < ApplicationController
 
+    def grove
+    end
+
     def bank_action
         message = current_user.withdraw_funds
         redirect_to bank_path, notice: message

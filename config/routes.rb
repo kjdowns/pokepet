@@ -24,5 +24,6 @@ Rails.application.routes.draw do
   post '/shop', to: 'towns#shop_action'
   get '/training', to: 'towns#training'
   post '/training', to: 'towns#training_action'
+  get '/grove', to: 'towns#grove'
 
 end
