@@ -1,7 +1,7 @@
-<h1>Welcome to PokePet <%= @user.user_name %></h1>
+<h1>Welcome to PokePet <%= current_user.user_name %></h1>
 <%= render partial: "inventory" %>
 <h3>Your Adoptions</h3>
-<% @user.adoptions.each do |adopt| %>
+<% current_user.adoptions.each do |adopt| %>
     <div>
     <%= image_tag(adopt.poke_pet.image) %><br>
     <%= adopt.nickname %> | Lvl: <%= adopt.level %><br>
