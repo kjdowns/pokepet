@@ -1,7 +1,26 @@
-<h3>Your Inventory</h3>
-<ul>
-    <li>Poke Dollars: <%= current_user.poke_dollars %></li>
-    <li>Treats: <%= current_user.treats %></li>
-    <li>PokeToys: <%= current_user.poke_toys %></li>
-    <li>PokeDolls: <%= current_user.poke_dolls %></li>
-</ul>
+<div class="col-md-4">
+<table class="table table-bordered my-4">
+    <thead class="thead-light">
+        <tr>
+            <th>Inventory</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tr>
+        <td>PokeDollars</td>
+        <td><%= current_user.poke_dollars %></td>
+    </tr>
+    <tr>
+        <td>PokeTreats</td>
+        <td><%= current_user.treats %></td>
+    </tr>
+    <tr>
+        <td>PokeToys</td>
+        <td><%= current_user.poke_toys %></td>
+    </tr>
+    <tr>
+        <td>PokeDolls</td>
+        <td><%= current_user.poke_dolls %></td>
+    </tr>
+</table>
+</div>
