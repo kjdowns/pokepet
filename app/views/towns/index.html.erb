@@ -1,8 +1,15 @@
-<h1>Poke Town</h1>
-<p>
-    <%= image_tag("https://www.nintendoenthusiast.com/wp-content/uploads/2019/10/ukart-800x400.jpg") %>
-</p>
-<%= link_to "Bank", bank_path %> | 
-<%= link_to "Shop", shop_path %> | 
-<%= link_to "Training", training_path %> | 
-<%= link_to "Oak's Grove", grove_path %>
+<div class="text-center">
+    <%= image_tag "https://www.nintendoenthusiast.com/wp-content/uploads/2019/10/ukart-800x400.jpg", class:"img-responsive m-2" %>
+
+    <h1>PokeTown</h1>
+    <p>
+        Welcome to the PokeTown! Here you can explore various places in town. Simply click on the name of the place you wish to go!   
+    </p>
+
+    <div class="btn-group m-4">
+        <%= button_to "Bank", bank_path, class:"btn px-4 mx-2" %> 
+        <%= button_to "Shop", shop_path, class:"btn px-4 mx-2" %> 
+        <%= button_to "Training", training_path, class:"btn px-4 mx-2" %>
+        <%= button_to "Oak's Grove", grove_path, class:"btn px-4 mx-2" %>
+    </div>
+</div>
