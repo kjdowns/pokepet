@@ -1,15 +1,15 @@
 <div class="text-center">
-<h1 class="m-3">Adoption Agreement</h1>
-<p class="m-2 p-2">
-Please pick a nickname for your new pet <%= @poke_pet.name %> and click the "Sign Agreement" button.<br>
-We took care of all that nasty paperwork for you already.
-</p>
-<%= image_tag @poke_pet.image, class:"mb-3" %>
-<%= form_for @adoption do |f| %>
-    <%= f.hidden_field :poke_pet_id, :value => @poke_pet.id %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.label :nickname %><br>
-    <%= f.text_field :nickname %><br><br>
-    <%= f.submit "Sign Agreement" %>
-<% end %>
+    <h1 class="m-3">Adoption Agreement</h1>
+    <p class="m-2 p-2">
+    Please pick a nickname for your new pet <%= @poke_pet.name %> and click the "Sign Agreement" button.<br>
+    We took care of all that nasty paperwork for you already.
+    </p>
+    <%= image_tag @poke_pet.image, class:"mb-3" %>
+    <%= form_for @adoption do |f| %>
+        <%= f.hidden_field :poke_pet_id, :value => @poke_pet.id %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.label :nickname %><br>
+        <%= f.text_field :nickname %><br><br>
+        <%= f.submit "Sign Agreement" %>
+    <% end %>
 </div>
