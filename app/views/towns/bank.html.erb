@@ -1,6 +1,13 @@
-<h1>Poke Bank</h1>
-<p>
-    <%= image_tag("https://nintendosoup.com/wp-content/uploads/2019/10/meowth_mime_jr_money.jpg") %>
-</p>
-<p>Welcome to the PokeBank! Here you can withdraw 1000 PokeDollars per day. Click the button below to withdraw your daily funds!</p>
-<%= button_to "Withdraw Funds", bank_path, method: :post %>
+
+<div class="text-center">
+    <%= image_tag "https://nintendosoup.com/wp-content/uploads/2019/10/meowth_mime_jr_money.jpg", class:"img-responsive m-2" %>
+
+    <h1 class="m-2">PokeBank</h1>
+    <p class="m-3">
+        Welcome to the PokeBank! Here you can withdraw 1000 PokeDollars per day. Click the button below to withdraw your daily funds!   
+    </p>
+
+    <div class="btn-group m-4">
+        <%= button_to "Withdraw Funds", bank_path, method: :post, class:"btn px-4 mx-2" %> 
+    </div>
+</div>
