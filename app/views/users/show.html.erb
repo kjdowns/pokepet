@@ -1,8 +1,6 @@
-<h1>Welcome to PokePet <%= current_user.user_name %></h1>
+<h1 class="text-center">Welcome to PokePet, <%= current_user.user_name %>!</h1>
 
-<%= render partial: "inventory" %>
-
-<h3>Your Adoptions</h3>
+<h2 class="text-center">Your Adoptions</h2>
 
 <div class="row">
     <% current_user.adoptions.each do |adopt| %>
@@ -17,4 +15,8 @@
             </div>
         </div>
     <% end %>
+</div>
+
+<div class="container text-center">
+    <%= render partial: "inventory" %>
 </div>
