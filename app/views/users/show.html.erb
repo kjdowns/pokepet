@@ -6,7 +6,7 @@
 
 <div class="row">
     <% current_user.adoptions.each do |adopt| %>
-        <div class="card col-lg-3">
+        <div class="card col-lg-3 m-1">
             <%= image_tag adopt.poke_pet.image, class:"card-img-top my-2" %>
             <h4 class="card-title text-center my-2">
                 <%= adopt.nickname %> - Lvl: <%= adopt.level %>
