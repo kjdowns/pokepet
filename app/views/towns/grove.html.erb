@@ -1,14 +1,26 @@
-<h1>Oak's Grove</h1>
+<div class="text-center">
+    <%= image_tag "https://cdn.bulbagarden.net/upload/8/8f/Ash_Pokemon_with_Oak.png", class:"img-responsive m-2" %>
 
-<%= image_tag("https://cdn.bulbagarden.net/upload/8/8f/Ash_Pokemon_with_Oak.png") %>
+    <h1 class="m-1 p-3">Oak's Grove</h1>
+    <p class="mb-3 p-3">
+        Welcome to Oak's Grove! This is the place PokePets go to live once they have reached MAX level.<br>
+        Here you can view and visit with all of the PokePets you have raised to MAX.   
+    </p>
 
-<p>
-    Welcome to Oak's Grove! This is the place PokePets go to live once they have reached MAX level. Here you can view and visit with all of the PokePets you have raised to MAX. 
-</p>
+    <div class="row">
+        <% @adoptions.each do |adopt| %>
+        <div class="card col-lg-3 mx-4 my-2 p-2">
+            <%= image_tag adopt.poke_pet.image, class:"card-img-top" %>
+            <h4 class="card-title text-center my-2">
+                <%= adopt.nickname %> - <%= adopt.poke_pet.element %> Type
+            </h4>
+            <div class="card-body text-center p-1">
+                <p>
+                    Species: <%= adopt.poke_pet.name %><br>
+                    Happiness: <%= adopt.happiness %><br>
+                </p>
+            </div>
+        <% end %>
+    </div>
 
-<% @adoptions.each do |adopt| %>
-    <%= image_tag(adopt.poke_pet.image) %><br>
-    <%= adopt.nickname %> | <%= adopt.poke_pet.element %> Type | Lvl: <%= adopt.level %><br>
-    Species: <%= adopt.poke_pet.name %><br>
-    Happiness: <%= adopt.happiness %><br>
-<% end %>
+</div>
