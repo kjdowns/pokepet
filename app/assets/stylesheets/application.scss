@@ -52,3 +52,25 @@ li {
     margin-left: 25px;
     margin-right: 25px;
 }
+
+img {
+    border-radius: 15px;
+}
+
+.card {
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-image: image-url("pokeball_background.png");
+}
+
+.card-title, .card-body {
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: beige;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card-body {
+    font-weight: bold;
+}

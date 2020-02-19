@@ -15,8 +15,8 @@
                 <%= adopt.nickname %> - Lvl: <%= adopt.level %>
             </h4>
             <div class="card-body d-flex">
-                <%= button_to "Visit", user_adoption_path(current_user, adopt), method: :get, class:"btn px-4 mx-2" %> 
-                <%= button_to "Release", adoption_path(adopt), method: :delete, class:"btn px-4 mx-2" %>
+                <%= button_to "Visit", user_adoption_path(current_user, adopt), method: :get, class:"btn btn-secondary px-4 mx-2" %> 
+                <%= button_to "Release", adoption_path(adopt), method: :delete, class:"btn btn-secondary px-4 mx-2" %>
             </div>
         </div>
     <% end %>
