@@ -63,7 +63,7 @@ img {
     background-image: image-url("pokeball_background.png");
 }
 
-.card-title, .card-body {
+.card-title, .card-body, h1, p {
     border-radius: 10px;
     border: 1px solid grey;
     background-color: beige;
@@ -73,4 +73,16 @@ img {
 
 .card-body {
     font-weight: bold;
+}
+
+.container {
+    margin-bottom: 75px;
+}
+
+h1 {
+    padding: 10px;
+}
+
+p {
+    padding: 20px;
 }
