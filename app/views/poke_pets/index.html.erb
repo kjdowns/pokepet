@@ -1,4 +1,5 @@
 <h1 class="text-center mt-5 mb-3">PokePet Adoption Center!</h1>
+
 <p class="text-center mb-5">
     Welcome to the adoption center! Here you can browse all of the PokePets available
     for adoption. Simply click on the "Adopt" button, and we will draft up the adoption
@@ -6,11 +7,13 @@
     come home with you!
 </p>
 
+<div class="row">
 <% @pokepets.each do |pet| %>
-    <div>
+    <div class="card col-lg-3 mx-4 my-2 p-2">
         <%= image_tag(pet.image) %><br>
         <%= pet.name %><br>
         Type: <%= pet.element %><br>
         <%= link_to "Adopt", new_poke_pet_adoption_path(pet) %>
     </div>
 <% end %>
+</div>
