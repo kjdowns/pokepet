@@ -7,6 +7,10 @@ class AdoptionsController < ApplicationController
 
     def create
         @adoption = Adoption.create(adoption_params)
+        if !@adoption.nickname.present?
+            @adoption.nickname = @adoption.poke_pet.name
+            @adoption.save
+        end
         redirect_to user_path(current_user)
     end
 
