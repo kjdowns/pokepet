@@ -1,16 +1,20 @@
-<h1>Poke Mart</h1>
-<p>
-    <%= image_tag("https://cdn.holdtoreset.com/wp-content/uploads/2019/11/14233027/Where-Are-Poke-Marts-750x422.jpg") %>
-</p>
-<p>Welcome to the PokeMart! Here you can buy items to replenish your inventory and better care for your PokePet!</p>
-    
-    <table>
-        <tr>
-            <th>Item</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Button</th>
-        </tr>
+<div class="text-center">
+    <%= image_tag "https://cdn.holdtoreset.com/wp-content/uploads/2019/11/14233027/Where-Are-Poke-Marts-750x422.jpg", class:"img-responsive m-2" %>
+
+    <h1 class="m-2 p-3">PokeMart</h1>
+    <p class="m-2 p-3">
+        Welcome to the PokeMart! Here you can buy items to replenish your inventory and better care for your PokePet!   
+    </p>
+
+    <table class="table table-bordered my-4">
+        <thead class="thead-light">
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
         <tr>
             <td>PokeTreat</td>
             <td>Reduces hunger by 1 point</td>
@@ -47,3 +51,4 @@
     </table>
 
 <%= render partial: "users/inventory" %>
+</div>
