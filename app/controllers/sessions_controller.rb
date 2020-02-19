@@ -1,10 +1,4 @@
 class SessionsController < ApplicationController
-    
-    def home 
-    end
-
-    def signin
-    end
 
     def google
         @user = User.find_or_create_by(user_name: auth['info']['email']) do |u|
