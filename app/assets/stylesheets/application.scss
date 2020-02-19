@@ -22,3 +22,19 @@ body {
 table {
     background-color: #DDF0F6;
 }
+
+nav {
+    background: rgb(73, 148, 235);
+    border-radius: 15px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+li {
+    border-radius: 15px;
+    border: 1px dotted black;
+    background: rgb(35, 161, 219);
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 25px;
+}
