@@ -1,4 +1,9 @@
-<h1 class="text-center">Welcome to PokePet, <%= current_user.user_name %>!</h1>
+<h1 class="text-center my-2 p-2">Welcome to PokePet! </h1>
+
+<div class="container text-center my-3 py-3">
+    <h6 class="float-left ml-3">User: <%= current_user.user_name %></h6>
+    <%= render partial: "inventory" %>
+</div>
 
 <h2 class="text-center">Your Adoptions</h2>
 
@@ -15,8 +20,4 @@
             </div>
         </div>
     <% end %>
-</div>
-
-<div class="container text-center">
-    <%= render partial: "inventory" %>
 </div>
