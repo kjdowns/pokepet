@@ -18,7 +18,7 @@
         <p>
             Type: <%= pet.element %>
         </p>
-        <%= button_to "Adopt", new_poke_pet_adoption_path(pet), class:"btn" %>
+        <%= button_to "Adopt", new_poke_pet_adoption_path(pet), method: :get, class:"btn" %>
         </div>
     </div>
 <% end %>
