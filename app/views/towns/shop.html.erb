@@ -22,7 +22,7 @@
             <td>
                 <%= form_tag shop_path do %>
                     <%= hidden_field_tag 'shop_action', 'treat' %>
-                    <%= submit_tag "Buy" %>
+                    <%= submit_tag "Buy", class:"btn px-3" %>
                 <% end %>
             </td>
         </tr>
@@ -33,7 +33,7 @@
             <td>
                 <%= form_tag shop_path do %>
                     <%= hidden_field_tag 'shop_action', 'toy' %>
-                    <%= submit_tag "Buy" %>
+                    <%= submit_tag "Buy", class:"btn px-3" %>
                 <% end %>
             </td>
         </tr>
@@ -44,7 +44,7 @@
             <td>
                 <%= form_tag shop_path do %>
                     <%= hidden_field_tag 'shop_action', 'doll' %>
-                    <%= submit_tag "Buy" %>
+                    <%= submit_tag "Buy", class:"btn px-3" %>
                 <% end %>
             </td>
         </tr>
