@@ -10,10 +10,16 @@
 <div class="row">
 <% @pokepets.each do |pet| %>
     <div class="card col-lg-3 mx-4 my-2 p-2">
-        <%= image_tag(pet.image) %><br>
-        <%= pet.name %><br>
-        Type: <%= pet.element %><br>
-        <%= link_to "Adopt", new_poke_pet_adoption_path(pet) %>
+        <%= image_tag pet.image, class:"card-img-top" %>
+        <h4 class="card-title text-center my-2">
+            <%= pet.name %>
+        </h4>
+        <div class="card-body text-center p-1">
+        <p>
+            Type: <%= pet.element %>
+        </p>
+        <%= button_to "Adopt", new_poke_pet_adoption_path(pet), class:"btn" %>
+        </div>
     </div>
 <% end %>
 </div>
