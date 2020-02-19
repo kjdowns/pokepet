@@ -20,7 +20,21 @@ body {
 }
 
 table {
+    border-collapse:separate;
     background-color: #DDF0F6;
+    border-radius: 15px 50px;
+}
+
+th {
+    border-radius: 15px 50px 0px 0px;
+}
+
+td#bot-left {
+    border-radius: 0px 0px 0px 50px;
+}
+
+td#bot-right {
+    border-radius: 0px 0px 15px 0px;
 }
 
 nav {
