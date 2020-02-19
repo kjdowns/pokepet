@@ -1,11 +1,16 @@
-<h1>Pet Training</h1>
-<p>
-    <%= image_tag("https://www.levelwinner.com/wp-content/uploads/2017/05/pokemon-magikarp-jump-800x350.jpg") %>
-</p>
-<p>Here you can train your PokePets! Training a pet will increase its happiness by 10 and as a result increase its level by one. This will also max out their hunger and thirst.</p>
+<div class="text-center">
+    <%= image_tag "https://www.levelwinner.com/wp-content/uploads/2017/05/pokemon-magikarp-jump-800x350.jpg", class:"img-responsive m-2" %>
 
-<%= form_tag 'training' do %>
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <%= collection_select(:user, :adoption_id, current_user.adoptions, :id, :nickname, {:prompt => "Choose a PokePet to train!"}) %><br>
-    <%= submit_tag "Train" %>
-<% end %>
+    <h1 class="m-1 p-3">PokePet Training</h1>
+    <p class="m-1 p-3">
+        Here you can train your PokePets! Training a pet will increase its happiness by 10 and as a result increase its level by one.<br>
+        This will also max out their hunger and thirst.   
+    </p>
+    <%= form_tag 'training' do %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <%= collection_select(:user, :adoption_id, current_user.adoptions, :id, :nickname, {:prompt => "Choose a PokePet to train!"}) %><br>
+        <p class="p-2 m-2">
+            <%= submit_tag "Train", class:"btn px-3" %>
+        </p>
+    <% end %>   
+</div>
