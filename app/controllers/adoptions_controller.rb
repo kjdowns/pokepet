@@ -22,8 +22,10 @@ class AdoptionsController < ApplicationController
     end
 
     def destroy
-        Adoption.find(params[:id]).destroy
-        redirect_to user_path(current_user)
+        @adoption = Adoption.find(params[:id])
+        message = "#{@adoption.nickname} was released to the wild!"
+        @adoption.destroy
+        redirect_to user_path(current_user), notice: message
     end
 
     private
