@@ -5,7 +5,11 @@
     <p class="m-2 p-3">
         Welcome to the PokeMart! Here you can buy items to replenish your inventory and better care for your PokePet!   
     </p>
-
+    <div class="row">
+    <div class="col-lg-4">
+    <%= render partial: "users/inventory" %>
+    </div>
+    <div class="col-lg-8">
     <table class="table table-bordered my-4">
         <thead class="thead-light">
             <tr>
@@ -49,6 +53,6 @@
             </td>
         </tr>
     </table>
-
-<%= render partial: "users/inventory" %>
+    </div>
+    </div>
 </div>
