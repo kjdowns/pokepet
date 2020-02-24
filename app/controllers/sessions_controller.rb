@@ -11,9 +11,12 @@ class SessionsController < ApplicationController
 
     def create
         @user = User.find_by(user_name: params[:user_name])
-        if @user.authenticate(params[:password])
+        if !!@user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
             redirect_to user_path(current_user)
+        else
+            message = "Something went wrong! Make sure your username and password are correct and try again."
+            redirect_to signin_path, notice: message
         end
     end
 
