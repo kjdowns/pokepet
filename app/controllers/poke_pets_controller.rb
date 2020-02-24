@@ -1,4 +1,5 @@
 class PokePetsController < ApplicationController
+    before_action :require_login
 
     def index
         @pokepets = PokePet.all

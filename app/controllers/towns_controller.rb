@@ -1,5 +1,6 @@
 class TownsController < ApplicationController
-
+    before_action :require_login
+    
     def grove
         @adoptions = current_user.adoptions.max_level
     end

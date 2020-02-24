@@ -1,4 +1,5 @@
 class AdoptionsController < ApplicationController
+    before_action :require_login
     
     def new
         @poke_pet = PokePet.find(params[:poke_pet_id])
