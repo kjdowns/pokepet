@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     has_many :adoptions
-    has_many :pokepets, through: :adoptions 
+    has_many :poke_pets, :through => :adoptions 
     has_secure_password
 
     validates :user_name, presence: true
